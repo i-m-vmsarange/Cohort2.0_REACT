@@ -1,0 +1,7 @@
+@import "tailwindcss";
+:root {
+  color-scheme: dark;
+}
+.trans-dur {
+  transition: all 0.5s;
+}
