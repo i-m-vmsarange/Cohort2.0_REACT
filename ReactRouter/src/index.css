@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+:root{
+    color-scheme: dark;
+}
+.active{
+    color: yellowgreen;
+    text-decoration: underline;
+}
+.inactive{
+    color: white;
+    text-decoration: underline;
+}
