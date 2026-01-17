@@ -21,6 +21,7 @@ const UserContext = ({ children }) => {
   return (
     <UserDataContext.Provider value={users}>
       {children}
+      {/* We are rendering app here */}
     </UserDataContext.Provider>
   );
 };
