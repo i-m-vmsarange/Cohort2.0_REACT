@@ -5,11 +5,14 @@ import { ProductDataContext } from "../context/ProductContext";
 
 const ProductDetails = () => {
   const productData = useContext(ProductDataContext);
+
   const params = useParams();
   const product = productData[params.id];
-  console.log(product);
-  return (
-    <div className="flex justify-center items-center h-screen m-0 w-full bg-black">
+
+  let selectedProduct = "No Product Found!!!!";
+
+  if (product != null) {
+    selectedProduct = (
       <div className="w-65 flex flex-col justify- rounded-lg text-center p-4 m-2 shadow-lg shadow-neutral-300 bg-yellow-50">
         <div className="text-center mb-3">
           <img className="w-full" src={product.image} alt="product-img" />
@@ -26,6 +29,12 @@ const ProductDetails = () => {
           </h4>
         </div>
       </div>
+    );
+  }
+
+  return (
+    <div className="flex justify-center items-center h-screen m-0 w-full bg-black">
+      {selectedProduct}
     </div>
   );
 };
